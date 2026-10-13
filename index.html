@@ -122,8 +122,16 @@ body{animation:grid 20s linear infinite}
 .reveal{opacity:0;transform:translateY(32px);transition:opacity .7s cubic-bezier(0,0,.2,1),transform .7s cubic-bezier(0,0,.2,1)}
 .reveal.in{opacity:1;transform:none}
 .card.reveal.in:hover{transform:translateY(-3px)}
-.card.main::after{content:"";position:absolute;inset:0;pointer-events:none;
+.card::after{content:"";position:absolute;inset:0;pointer-events:none;
   background:linear-gradient(105deg,transparent 40%,rgba(255,77,99,.14) 50%,transparent 60%);background-size:250% 100%;animation:sheen 5s infinite}
+.card:nth-child(2)::after{animation-delay:1.6s}
+.card:nth-child(3)::after{animation-delay:3.2s}
+.card{animation:glow 4s ease-in-out infinite}
+.card:nth-child(2){animation-delay:1.3s}
+.card:nth-child(3){animation-delay:2.6s}
+@keyframes glow{50%{box-shadow:0 0 40px -18px rgba(229,16,47,.55)}}
+.card.main{animation-name:glow-strong}
+@keyframes glow-strong{50%{box-shadow:0 0 80px -16px rgba(229,16,47,.8)}}
 @keyframes sheen{from{background-position:150% 0}to{background-position:-100% 0}}
 .btn{position:relative;overflow:hidden}
 .btn.alt{background:transparent;border:1px solid var(--accent);box-shadow:none}
@@ -187,7 +195,7 @@ body{animation:grid 20s linear infinite}
       <h2>Formule suivi</h2>
       <div class="tier">
         <span class="mono">Basique · site vitrine</span>
-        <p class="price">30 – 80 € <small>/ mois</small></p>
+        <p class="price"><span data-count="30">30</span> – <span data-count="80">80</span> € <small>/ mois</small></p>
         <ul>
           <li>Nom de domaine</li>
           <li>Mises à jour</li>
@@ -196,7 +204,7 @@ body{animation:grid 20s linear infinite}
       </div>
       <div class="tier">
         <span class="mono">Standard · site complet</span>
-        <p class="price">80 – 200 € <small>/ mois</small></p>
+        <p class="price"><span data-count="80">80</span> – <span data-count="200">200</span> € <small>/ mois</small></p>
         <ul>
           <li>Tout le Basique</li>
           <li>Support et dépannage</li>
@@ -223,7 +231,7 @@ body{animation:grid 20s linear infinite}
     <article class="card">
       <span class="mono">03 / Modification</span>
       <h2>À la demande</h2>
-      <p class="price">30 – 60 € <small>/ modification</small></p>
+      <p class="price"><span data-count="30">30</span> – <span data-count="60">60</span> € <small>/ modification</small></p>
       <ul>
         <li>Textes, images, liens, sections</li>
       </ul>
