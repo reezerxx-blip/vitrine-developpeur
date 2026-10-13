@@ -1,0 +1,288 @@
+﻿<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Olivier – Création de site web sur mesure dès 500 €</title>
+<meta name="description" content="Création de site web sur mesure : vitrine ou site complet, de 500 à 2 000 €. Responsive, rapide, SEO de base, mise en ligne incluse. Maintenance dès 30 €/mois.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0b0307">
+<!-- TODO une fois le domaine connu : <link rel="canonical" href="https://TON-DOMAINE/"> et og:url / og:image en URL absolue -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Olivier – Création de site web sur mesure dès 500 €">
+<meta property="og:description" content="Site vitrine ou site complet, de 500 à 2 000 €. Maintenance dès 30 €/mois.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Olivier – Création de site web sur mesure dès 500 €">
+<meta name="twitter:description" content="Site vitrine ou site complet, de 500 à 2 000 €. Maintenance dès 30 €/mois.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Olivier – Création de sites web","description":"Création de sites web sur mesure (vitrine ou site complet) et maintenance.","telephone":"+33621604344","email":"ruminskiolivier@gmail.com","image":"pp_olivier_web.jpg","priceRange":"500–2000 EUR",
+"hasOfferCatalog":{"@type":"OfferCatalog","name":"Tarifs","itemListElement":[
+{"@type":"Offer","itemOffered":{"@type":"Service","name":"Création de site web"},"priceSpecification":{"@type":"PriceSpecification","minPrice":500,"maxPrice":2000,"priceCurrency":"EUR"}},
+{"@type":"Offer","itemOffered":{"@type":"Service","name":"Maintenance mensuelle – site vitrine"},"priceSpecification":{"@type":"UnitPriceSpecification","minPrice":30,"maxPrice":80,"priceCurrency":"EUR","unitCode":"MON"}},
+{"@type":"Offer","itemOffered":{"@type":"Service","name":"Maintenance mensuelle – site complet"},"priceSpecification":{"@type":"UnitPriceSpecification","minPrice":80,"maxPrice":200,"priceCurrency":"EUR","unitCode":"MON"}},
+{"@type":"Offer","itemOffered":{"@type":"Service","name":"Petite modification"},"priceSpecification":{"@type":"PriceSpecification","minPrice":30,"maxPrice":60,"priceCurrency":"EUR"}}]}}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0307; --surface:#14070c; --text:#f4ece9; --muted:#a8969a;
+  --accent:#e5102f; --accent-soft:#ff4d63; --border:rgba(229,16,47,.28);
+  --font-display:'Bricolage Grotesque',sans-serif; --font-body:'DM Sans',sans-serif; --font-mono:'JetBrains Mono',monospace;
+  --s1:8px; --s2:16px; --s3:24px; --s4:32px; --s5:48px; --s6:64px;
+  --r:4px;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font:400 16px/1.6 var(--font-body);min-height:100vh;overflow-x:hidden;
+  background-image:
+    radial-gradient(60% 50% at 80% 0%,rgba(229,16,47,.22),transparent 70%),
+    linear-gradient(rgba(229,16,47,.07) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(229,16,47,.07) 1px,transparent 1px);
+  background-size:auto,48px 48px,48px 48px;
+  background-attachment:fixed}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;opacity:.03;
+  background:repeating-linear-gradient(0deg,#fff 0 1px,transparent 1px 3px)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 var(--s3)}
+.mono{font-family:var(--font-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-soft)}
+
+/* HERO */
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:var(--s5);align-items:center;padding:var(--s6) 0 var(--s5)}
+.status{display:inline-flex;align-items:center;gap:var(--s1);padding:6px 12px;border:1px solid var(--border);border-radius:99px;background:rgba(229,16,47,.08)}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent);animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.35}}
+h1{font:800 clamp(40px,7vw,76px)/1.02 var(--font-display);letter-spacing:-.03em;margin:var(--s3) 0 var(--s2)}
+h1 em{font-style:normal;color:var(--accent);text-shadow:0 0 40px rgba(229,16,47,.55)}
+.lead{color:var(--muted);max-width:46ch}
+.photo{position:relative;justify-self:center;width:100%;max-width:340px;aspect-ratio:3/4}
+.photo img{width:100%;height:100%;object-fit:cover;display:block;border-radius:var(--r);filter:saturate(1.05)}
+.photo::before{content:"";position:absolute;inset:-18px;background:radial-gradient(closest-side,rgba(229,16,47,.45),transparent);filter:blur(30px);z-index:-1}
+.photo i{position:absolute;width:22px;height:22px;border:2px solid var(--accent-soft)}
+.photo i:nth-of-type(1){top:-8px;left:-8px;border-right:0;border-bottom:0}
+.photo i:nth-of-type(2){top:-8px;right:-8px;border-left:0;border-bottom:0}
+.photo i:nth-of-type(3){bottom:-8px;left:-8px;border-right:0;border-top:0}
+.photo i:nth-of-type(4){bottom:-8px;right:-8px;border-left:0;border-top:0}
+.photo span{position:absolute;left:var(--s2);bottom:var(--s2);padding:4px 10px;background:rgba(11,3,7,.8);border:1px solid var(--border);backdrop-filter:blur(6px)}
+
+/* CARDS */
+.grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:var(--s3);padding-bottom:var(--s5)}
+.card{--mx:50%;--my:50%;position:relative;padding:var(--s4);background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;
+  display:flex;flex-direction:column;gap:var(--s2);transition:transform .2s cubic-bezier(0,0,.2,1),border-color .2s}
+.card::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .35s;
+  background:radial-gradient(320px circle at var(--mx) var(--my),rgba(229,16,47,.22),transparent 70%)}
+.card:hover{transform:translateY(-3px);border-color:var(--accent)}
+.card:hover::before{opacity:1}
+.card.main{background:linear-gradient(160deg,#2a0610,var(--surface) 65%);border-color:var(--accent);box-shadow:0 0 60px -20px rgba(229,16,47,.6)}
+.card h2{font:700 22px/1.2 var(--font-display)}
+.price{font:800 clamp(34px,4.5vw,48px)/1 var(--font-display);letter-spacing:-.02em}
+.price small{display:block;margin-top:6px;font:500 14px var(--font-body);color:var(--muted);letter-spacing:0}
+.card ul{list-style:none;padding:0;display:grid;gap:10px;color:var(--muted);font-size:15px}
+.card li{display:flex;gap:10px}
+.card li::before{content:"";flex:none;width:6px;height:6px;margin-top:9px;background:var(--accent);transform:rotate(45deg)}
+.note{margin-top:auto;padding-top:var(--s2);border-top:1px dashed var(--border);font-size:14px;color:var(--muted)}
+
+.grid{align-items:stretch}
+.tier{display:grid;gap:var(--s1);padding:var(--s2);border:1px solid var(--border);border-radius:var(--r);background:rgba(229,16,47,.05)}
+.tier .price{font-size:30px}
+.tier+.tier{border-color:var(--accent)}
+details{border-top:1px dashed var(--border);padding-top:var(--s2)}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;min-height:32px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:18px;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details ul,details ol{margin-top:var(--s2)}
+details ol{padding-left:20px;display:grid;gap:10px;color:var(--muted);font-size:15px}
+details ol li::marker{color:var(--accent-soft);font-family:var(--font-mono)}
+details>ul{font-size:14px}
+
+/* CTA */
+.cta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--s3);padding:var(--s4);border:1px solid var(--border);border-radius:var(--r);margin-bottom:var(--s6)}
+.cta p{font:700 clamp(20px,3vw,28px)/1.2 var(--font-display)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 var(--s4);background:var(--accent);color:#fff;font:700 15px var(--font-display);
+  text-decoration:none;border-radius:var(--r);box-shadow:0 0 30px -4px rgba(229,16,47,.7);transition:background .15s,transform .15s}
+.btn:hover{background:var(--accent-soft);transform:translateY(-2px)}
+.btn:focus-visible,a:focus-visible{outline:2px solid var(--text);outline-offset:3px}
+footer{padding-bottom:var(--s4);color:var(--muted);font-size:13px;text-align:center}
+
+/* MOTION */
+body{animation:grid 20s linear infinite}
+@keyframes grid{to{background-position:0 0,0 48px,48px 0}}
+.hero>div:first-child>*{animation:rise .8s cubic-bezier(0,0,.2,1) both}
+.hero>div:first-child>:nth-child(2){animation-delay:.12s}
+.hero>div:first-child>:nth-child(3){animation-delay:.24s}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}}
+.photo{animation:float 6s ease-in-out infinite,rise 1s .2s cubic-bezier(0,0,.2,1) both}
+@keyframes float{50%{transform:translateY(-10px)}}
+.photo::after{content:"";position:absolute;left:0;right:0;height:2px;background:var(--accent-soft);box-shadow:0 0 18px 4px rgba(255,77,99,.7);animation:scan 4s ease-in-out infinite}
+@keyframes scan{0%{top:0;opacity:0}10%,90%{opacity:.9}100%{top:100%;opacity:0}}
+.photo i{animation:blink 3s infinite}
+@keyframes blink{50%{border-color:var(--accent)}}
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .7s cubic-bezier(0,0,.2,1),transform .7s cubic-bezier(0,0,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.card.reveal.in:hover{transform:translateY(-3px)}
+.card.main::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(105deg,transparent 40%,rgba(255,77,99,.14) 50%,transparent 60%);background-size:250% 100%;animation:sheen 5s infinite}
+@keyframes sheen{from{background-position:150% 0}to{background-position:-100% 0}}
+.btn{position:relative;overflow:hidden}
+.btn.alt{background:transparent;border:1px solid var(--accent);box-shadow:none}
+.btn.alt:hover{background:rgba(229,16,47,.15)}
+.btn:not(.alt)::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.35) 50%,transparent 60%);transform:translateX(-120%);animation:shine 3.5s infinite}
+@keyframes shine{40%,100%{transform:translateX(120%)}}
+.actions{display:flex;flex-wrap:wrap;gap:var(--s2)}
+
+@media(max-width:480px){.card,.cta{padding:var(--s3)}.btn{width:100%}}
+@media(max-width:860px){.hero{grid-template-columns:1fr;padding-top:var(--s5)}.photo{order:-1;max-width:260px}.grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+  <section class="hero">
+    <div>
+      <span class="status mono"><span class="dot"></span>Disponible pour nouveaux projets</span>
+      <h1>Votre site web,<br><em>sur mesure.</em></h1>
+      <p class="lead">Je conçois des sites rapides, soignés et pensés pour convertir. Un tarif clair, sans surprise.</p>
+    </div>
+    <div class="photo">
+      <i></i><i></i><i></i><i></i>
+      <img src="pp_olivier_web.jpg" alt="Portrait d’Olivier, créateur de sites web, sur fond rouge" width="680" height="907" fetchpriority="high" decoding="async">
+      <span class="mono">Olivier · Web</span>
+    </div>
+  </section>
+
+  <section class="grid" aria-label="Tarifs">
+    <article class="card main">
+      <span class="mono">01 / Création</span>
+      <h2>Site web</h2>
+      <p class="price"><span data-count="500">500</span> – <span data-count="2000">2 000</span> € <small>one-shot</small></p>
+      <ul>
+        <li>Design sur mesure, validé avec vous</li>
+        <li>Responsive : mobile, tablette, desktop</li>
+        <li>Rapide, accessible, SEO de base</li>
+        <li>Mise en ligne incluse</li>
+      </ul>
+      <details>
+        <summary class="mono">Tout ce qui est livré</summary>
+        <ul>
+          <li>Pages et fonctionnalités conformes au cahier des charges signé</li>
+          <li>Testé sur les navigateurs principaux</li>
+          <li>Core Web Vitals, contraste, focus, balises, sitemap, robots.txt, schema</li>
+          <li>Sécurisé : HTTPS, formulaires protégés</li>
+          <li>Légal : mentions légales, RGPD, bandeau cookies, politique de confidentialité</li>
+          <li>Hébergement, nom de domaine, DNS, emails si besoin</li>
+          <li>Accès remis (admin, hébergeur, domaine), documentation courte, prise en main</li>
+          <li>Domaine et hébergement à votre nom : vous restez propriétaire, j’ai un accès délégué</li>
+          <li>Propriété du site cédée après paiement complet</li>
+          <li>Garantie bugs 3 mois après livraison</li>
+        </ul>
+      </details>
+      <p class="note">Devis gratuit · acompte 30 % à la signature, solde à la livraison · 2 séries de retouches design incluses.</p>
+    </article>
+
+    <article class="card">
+      <span class="mono">02 / Maintenance</span>
+      <h2>Formule suivi</h2>
+      <div class="tier">
+        <span class="mono">Basique · site vitrine</span>
+        <p class="price">30 – 80 € <small>/ mois</small></p>
+        <ul>
+          <li>Nom de domaine</li>
+          <li>Mises à jour</li>
+          <li>Politique de confidentialité</li>
+        </ul>
+      </div>
+      <div class="tier">
+        <span class="mono">Standard · site complet</span>
+        <p class="price">80 – 200 € <small>/ mois</small></p>
+        <ul>
+          <li>Tout le Basique</li>
+          <li>Support et dépannage</li>
+          <li>Petites retouches : 1 à 2 h</li>
+        </ul>
+      </div>
+      <details>
+        <summary class="mono">Ce qui est surveillé</summary>
+        <ul>
+          <li>Mises à jour CMS, plugins, dépendances (mensuel)</li>
+          <li>Sauvegardes fichiers et base de données, test de restauration</li>
+          <li>Monitoring : site en ligne, temps de réponse</li>
+          <li>Certificat SSL, renouvellement du domaine</li>
+          <li>Sécurité : scan malware, correction de failles</li>
+          <li>Performance : vitesse, images, cache (trimestriel)</li>
+          <li>Liens cassés, formulaires, emails reçus</li>
+          <li>Compatibilité : nouvelles versions PHP et navigateurs</li>
+          <li>Support : petites questions, dépannage</li>
+        </ul>
+      </details>
+      <p class="note">La maintenance garde le site sain et sécurisé. Nouvelles pages, design et fonctionnalités = évolutions, sur devis.</p>
+    </article>
+
+    <article class="card">
+      <span class="mono">03 / Modification</span>
+      <h2>À la demande</h2>
+      <p class="price">30 – 60 € <small>/ modification</small></p>
+      <ul>
+        <li>Textes, images, liens, sections</li>
+      </ul>
+      <details>
+        <summary class="mono">Comment ça se passe</summary>
+        <ol>
+          <li>Demande écrite par email (ruminskiolivier@gmail.com)</li>
+          <li>Qualification : bug (gratuit sous garantie), ajustement mineur ou évolution</li>
+          <li>Devis validé par écrit pour toute évolution : périmètre, délai, prix</li>
+          <li>Travail en environnement de test, jamais en direct</li>
+          <li>Sauvegarde, mise en ligne, vérification</li>
+          <li>Validation de votre part, changements documentés</li>
+        </ol>
+        <ul>
+          <li>Ajout d’une page : 80 – 250 €</li>
+          <li>Nouvelle fonctionnalité : 300 – 2 500 €</li>
+          <li>Refonte d’une section ou du design : 1 000 – 5 000 €, sur devis</li>
+          <li>Dépannage urgent hors contrat : 80 – 150 €/h</li>
+        </ul>
+      </details>
+      <p class="note">Plusieurs modifications ? Tarif personnalisé selon l’ampleur.</p>
+    </article>
+  </section>
+
+  <section class="cta">
+    <p>Un projet en tête ?<br>Parlons-en.</p>
+    <div class="actions">
+      <a class="btn" href="tel:+33621604344">06 21 60 43 44</a>
+      <a class="btn alt" href="mailto:ruminskiolivier@gmail.com?subject=Demande%20de%20devis%20site%20web">ruminskiolivier@gmail.com</a>
+    </div>
+  </section>
+
+  <footer>© 2026 Olivier — Création de sites web</footer>
+</main>
+
+<script>
+const still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+// apparition au scroll (décalée) + compteurs
+document.querySelectorAll('.card,.cta').forEach((el,i)=>{el.classList.add('reveal');el.style.transitionDelay=(i%3)*120+'ms'});
+const fmt=n=>n.toLocaleString('fr-FR');
+function count(el){
+  const to=+el.dataset.count,t0=performance.now();
+  (function tick(t){const p=Math.min((t-t0)/1200,1);el.textContent=fmt(Math.round(to*(1-Math.pow(1-p,3))));if(p<1)requestAnimationFrame(tick)})(t0);
+}
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;
+  e.target.classList.add('in');io.unobserve(e.target);
+  if(!still)e.target.querySelectorAll('[data-count]').forEach(count);
+}),{threshold:.2});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// spotlight qui suit la souris sur les cartes
+document.querySelectorAll('.card').forEach(c=>{
+  c.addEventListener('pointermove',e=>{
+    const r=c.getBoundingClientRect();
+    c.style.setProperty('--mx',(e.clientX-r.left)+'px');
+    c.style.setProperty('--my',(e.clientY-r.top)+'px');
+  });
+});
+</script>
+</body>
+</html>
+
